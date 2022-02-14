@@ -1,4 +1,15 @@
+%margins {
+	margin: 0;
+	padding: 0;
+}
+
+%links {
+	text-decoration: none;
+}
+
 body {
+	@extend %margins;
+	bottom: 0;
 }
 
 img {
@@ -6,6 +17,7 @@ img {
 	height: auto;
 }
 a {
+	@extend %links;
 }
 
 .wrapper {
@@ -13,6 +25,8 @@ a {
 	flex-direction: column;
 
 	min-height: 100vh;
+
+
 }
 
 
@@ -161,11 +175,17 @@ h1{
 .footer__list {
 	display: flex;
 	flex-direction: column;
+
 }
 @media (min-width: 768px) {
 	.footer__list {
-		
+		flex-direction: row;
 		justify-content: space-between;
+
+		width: 100%;
+
+
+		border: 1px solid #000;
 	}
 	.footer__item {
 		width: 20%;
